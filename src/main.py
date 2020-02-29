@@ -1,5 +1,5 @@
 """Entry file to the program escape from torkiv. See readme for details!"""
-bad_code=7
+
 
 def main():
     print(
