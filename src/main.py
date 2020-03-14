@@ -6,7 +6,7 @@ def main():
         'You wake up in an unknown house. You appear to be in a '
         'bedroom. '
         'The air is frigid; there is an icy window that you might '
-        'be able to break through and a door to the bedroom.\n'
+        'be able to break through and a door.\n'
         '  1. Try to break through the window\n'
         '  2. Go through the door\n'
         '  3. Hide under the comforter\n'
@@ -33,15 +33,14 @@ def break_through_window_1():
 
 def go_through_door_1():
     print(
-        'You go through the door and a large dog growls at you. You go '
-        'down a set of stairs and find 4 more rooms.\n'
+        'You go through the door and a large dog growls at you. You see'
+        ' a set of stairs and 4 rooms.\n'
         '  1. Leap over the railing\n'
         '  2. Climb down the stairs\n'
         '  3. Enter the room with a check on it\n'
         '  4. Enter the room with an A on it\n'
     )
     choice = input()
-
     if choice == '1':
         leap_over_railing()
     elif choice == '2':
@@ -81,9 +80,16 @@ def enter_checkmark_room():
     print(
         'You enter a room and there are 2 different levers, all pointed up. '
         '\n'
-        '1. Pull the lever with blood on it.'
+        '1. Pull the lever with blood on it.\n'
         '2. Pull the lever with an ant colony on it.'
     )
+    choice = input()
+    if choice == '1':
+        pull_blood_lever()
+    elif choice == '2':
+        pull_ant_lever()
+    else:
+        enter_checkmark_room()
 
 
 def enter_room_a():
@@ -92,6 +98,23 @@ def enter_room_a():
         ' "Annihilation or Apples". You yell back "Apples". That'
         ' doesn\'t seem so bad. You spend the next 30 hours picking apples,'
         ' until you die of dehydration.\n\n'
+        'GAME OVER'
+    )
+
+
+def pull_blood_lever():
+    print(
+        'You pull the blood lever, and it opens a mysterious room with n'
+        'nothing but darkness inside.\n\n'
+        '1. Go through the door.\n'
+        '2. Unpull the lever and run out.'
+    )
+
+
+def pull_ant_lever():
+    print(
+        'You try to pull the lever with ants, but a force is holding your'
+        ' hand to the lever, and the ants start to chew your body. \n\n'
         'GAME OVER'
     )
 
